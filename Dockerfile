@@ -36,15 +36,14 @@ RUN TARGET="" &&\
       make && make install && rm -rf * ; } ; \
     install_make_project "https://www.musl-libc.org/releases/musl-1.1.16.tar.gz" ""
 
-
+# Breaks:
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2017-02-16 && \
+# Works:
+# RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2017-02-13 && \
     rustup target add x86_64-unknown-linux-musl
 
 ADD . /workdir
 
-RUN cargo build --release --target=x86_64-unknown-linux-musl && \
-    rm -rf *
+RUN cargo build --target=x86_64-unknown-linux-musl
 
-VOLUME /workdir
-
-CMD cargo build --release --target=x86_64-unknown-linux-musl
+CMD /bin/bash
