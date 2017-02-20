@@ -1,0 +1,12 @@
+.git
+.sass-cache
+audio
+images
+user_audio
+backups
+assets_dev
+target/debug
+target/release
+target/rls
+ganbare_backend/target
+

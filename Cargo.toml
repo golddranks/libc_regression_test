@@ -1,0 +1,7 @@
+[package]
+name = "libc_regression_test"
+version = "0.0.1"
+authors = ["Pyry Kontio <pyry.kontio@drasa.eu>"]
+
+[dependencies]
+libc = "0.2"

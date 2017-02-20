@@ -1,0 +1,17 @@
+*.bk
+*.map
+.env
+.env.*
+.sass-cache
+*.css.map
+.DS_Store
+target
+/assets_dev/
+/audio/
+/images/
+/backups/
+/static/content_audio
+/static/content_images
+/static/css/main.css
+/static/ts/
+/user_audio/
