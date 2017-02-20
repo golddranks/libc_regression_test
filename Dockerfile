@@ -4,16 +4,8 @@ USER root
 
 RUN apt-get update && \
   apt-get install -y \
-  musl-dev \
-  bzip2 \
-  make \
   curl \
-  pkgconf \
-  git \
-  xutils-dev \
   g++ \
-  file \
-  nano \
   ca-certificates \
   --no-install-recommends && \
   rm -rf /var/lib/apt/lists/* && \
