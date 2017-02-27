@@ -16,7 +16,7 @@ WORKDIR /workdir
 ENV PATH=/root/.cargo/bin:$PATH
 
 # Breaks:
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2017-02-16 && \
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2017-02-27 && \
 # Works:
 # RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2017-02-13 && \
     rustup target add x86_64-unknown-linux-musl
